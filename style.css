@@ -1,0 +1,418 @@
+/*
+Theme name: learningWordPress
+Author: lgendrot
+Author URI: http://www.manicfringe.com
+Version: 1.0
+*/
+
+html {
+	padding: 0;
+	margin: 0;
+	background-color: #DDD;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+}
+
+a:link,
+a:visited {
+	color:#006ec3;
+}
+
+p {
+	line-height: 1.5em;
+	margin: 0 0 1em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 1em 0;
+	font-weight: normal;
+}
+
+
+
+
+/* General Layout */
+
+
+
+article.post {
+	margin-bottom: 50px;
+	clear:left;
+	background-color: #FFF;
+	padding-top: 30px;
+	padding-right: 30px;
+	padding-bottom: 30px;
+	box-shadow: 1px 1px 5px 0 gray;
+}
+
+.post:first-of-type{
+	margin-top: 30px;
+}
+
+article.post p {
+	font-size: 1.18em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+div.container{
+	margin: 0 auto;
+
+}
+
+
+/* Main Collumn */
+
+#content {
+	padding: 20px;
+	padding-left: 25px;
+	padding-right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #D3D3D3;
+	width: 80%;
+	border-radius: 8px;
+}
+
+.main-column {
+	width: 64%;
+	border-radius: 8px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 auto;
+	margin-left: 5px;
+	
+}
+/* Secondary Column */
+
+.secondary-column {
+	display: inline-block;
+	width: 33%;
+	margin: 0 auto;
+	left: 10px;
+	margin-right: 5px;
+}
+
+/* Widgets */
+
+.widget-item1 {
+	font-family: "Trebuchet MS";
+	background-color: #FFF;
+	margin-top: 30px;
+	box-shadow: 1px 1px 5px 0 gray;
+	padding: 10px 0;
+	text-align: center;
+	height: 250px;
+}
+
+
+
+.widget-item1 ul {
+	list-style: none;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+
+}
+
+.widget-item1 ul li {
+
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+
+.widget-item1 ul li a {
+	margin: 0 auto;
+	display: block;
+	width: 40%;
+	border: 1px solid gray;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.widget-item1 h2.widgettitle {
+	margin-bottom: 0;
+	font-size: 1.6em;
+	font-weight: bold;
+	margin-top: 15px;
+}
+
+
+/* article styling */ 
+
+article.post:last-of-type{
+	border-bottom: none;
+}
+
+article.post h2  {
+	margin-bottom: 0;
+	color: black;
+	
+}
+article.post h2  a:visited, article.post h2 a:link {
+	color: #1A2B2B;
+	font-family: sans-serif;
+	text-decoration: none;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+article.post p a:visited, article.post p a:link{
+	color: #02779E;
+	text-decoration: none;
+	border-bottom: 1px #02779E dotted;
+}
+
+article.post p a:hover{
+	color: #013445;
+	border-bottom: 1px #013445 solid;
+	text-decoration: none;
+	padding: 0;
+}
+
+
+
+/* Header */
+
+header.site-header ul {
+	display: block;
+	margin-top: 0;
+
+}
+
+header.site-header {
+	/* border-bottom: 2px solid #DDD; */
+	margin-bottom: 20px;
+	padding: 30px 0 0 0;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+
+}
+
+header.site-header h1 {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font-weight: bolder;
+	font-size: 400%;
+	color: #3B171B;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+header.site-header h1 a:link,
+header.site-header h1 a:visited {
+	text-decoration: none;
+	color: black;
+	margin-right: auto;
+	
+
+}
+
+header.site-header h5 {
+	margin-bottom: 1em;
+	display: inline;
+	clear: left;
+}
+
+
+/* Search Bar */
+
+div.head-search {
+	float: right;
+	position: relative;
+	top: 30px;
+	right: 25px;
+}
+
+.head-search #searchsubmit {
+
+	background-color: #02779E;
+	color: #FFF;
+	border: none;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-radius: 2px;
+
+}
+.head-search #searchsubmit:active {
+	background-color: #3492B1;
+
+}
+
+
+
+
+
+
+/* Navigation Menus */
+
+body div nav.site-nav#heading-nav{
+	text-align: center; 
+	margin-bottom: 10px;
+	background-color: #3492B1;
+	box-shadow: 0 1px 3px 0 black;
+	padding: 10px 0 10px 0;
+	display: inline-block;
+	width: 100%;
+}
+
+nav.site-nav ul {
+	margin:0;
+	padding:0;
+}
+
+nav.site-nav#heading-nav ul:before, .site-nav ul:after{ content: ""; display: table; }
+nav.site-nav#heading-nav ul:after { clear: right; }
+nav.site-nav#heading-nav ul {*zoom: 1; }
+
+
+
+body nav.site-nav ul li {
+	list-style: none;
+	margin-bottom: 8px;
+	margin-top: 2px;
+	margin-left: 7.5px;
+	margin-right: 7.5px;
+	display: inline;
+}
+
+
+
+
+
+body nav.site-nav ul li a:link,
+body nav.site-nav ul li a:visited{
+	padding: auto;
+	font-size: 1.5em;
+	color: black;
+	border-bottom: none;
+	text-decoration: none;
+	font-family: "Trebuchet MS";
+}
+
+body nav.site-nav ul li a:hover {
+	color: white;
+}
+
+
+body nav.site-nav#heading-nav ul li.current-menu-item a:link,
+body nav.site-nav#heading-nav ul li.current-menu-item a:visited{
+	color: white;
+	border-bottom: 1px white dotted;
+}
+
+
+/* Post Styles */
+
+.post h2 {
+	margin-bottom: 0;
+}
+
+article p.post-info {
+	font-size: 1em;
+	color: #999;
+}
+
+article p.post-info a:link,
+article p.post-info a:visited {
+	color: #999;
+	border-bottom: 1px #999 dotted;
+
+}
+
+article p.post-info a:hover {
+	color: #013445;
+	border-bottom: 1px #013445 solid;
+	text-decoration: none;
+	padding: 0;
+}
+
+/* Image Styles */
+
+.has-thumbnail {
+	position: relative;
+	padding-left: 230px;
+}
+
+.no-thumbnail {
+	padding-left: 30px;
+}
+
+.post-thumbnail {
+	position: absolute;
+	top: 38px;
+	left: 20px;
+}
+
+.banner-img {
+	width: 100%;
+}
+
+
+/* Footer */
+
+#footer-container {
+	clear: both;
+	background-color: #FFF;
+	margin-top: 5px;
+}
+
+.site-footer {
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+	
+
+
+
+footer.site-copyright {
+	font-size: .75em;
+	margin-top: 10px;
+	float: right;
+}
+
+footer nav.site-nav ul {
+	list-style: none;
+	float: left;
+	font-size: .75em;
+	padding: 0;
+	font-family: "Trebuchet MS";
+	margin-top: 10px;
+}
+
+/* Site Footer Menu */
+
+footer nav.site-nav ul li {
+	margin-right: 10px;
+	padding-right: 10px;
+	border-right: 1px dotted #bbb;
+}
+
+/* Page Style */
+
+article.page h2 {
+	font-size: 150%
+}
+
+
+
+/* Clearfix */
+
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}

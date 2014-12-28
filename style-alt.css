@@ -1,0 +1,291 @@
+/*
+Theme name: learningWordPress
+Author: lgendrot
+Author URI: http://www.manicfringe.com
+Version: 1.0
+*/
+
+html {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+}
+
+a:link,
+a:visited {
+	color:#006ec3;
+}
+
+p {
+	line-height: 1.65em;
+	margin: 0 0 1em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 1em 0;
+	font-weight: normal;
+}
+
+/*Sidebar*/
+/* 
+div #profilepic img {
+	height: 150px;
+	width: 150px;
+	border-radius: 100%;
+	margin-top: 40px;
+}
+
+div.sidebar {
+	display: block;
+	float: left;
+	height: 100%;
+	width: 18%;
+	text-align: center;
+	margin-left: 5%;
+	margin-top: 50px;
+}
+
+
+div.sidebar p {
+	clear: both;
+	display: inline;
+	margin: 10px;
+}
+ */
+
+
+
+/* General Layout */
+
+article.post {
+	margin-bottom: 20px;
+	clear:left;
+	max-width: 66%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+article.post p {
+	font-size: 1.18em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+div.container{
+	margin: 0 auto;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 30px;
+	width: 75%;
+}
+
+
+
+article.post:last-of-type{
+	border-bottom: none;
+}
+
+article.post h2  {
+	margin-top: 60px;
+	margin-bottom: 10px;
+	color: black;
+	
+}
+article.post h2  a:visited, article.post h2 a:link {
+	color: #1A2B2B;
+	font-family: sans-serif;
+	text-decoration: none;
+	font-size: 1.6em;
+	font-weight: bold;
+}
+
+article.post p a:visited, article.post p a:link{
+	color: #02779E;
+	text-decoration: none;
+	border-bottom: 1px #02779E dotted;
+}
+
+article.post p a:hover{
+	color: #013445;
+	border-bottom: 1px #013445 solid;
+	text-decoration: none;
+	padding: 0;
+}
+
+div#borderimgBot {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 7px;
+	max-width: 65%;
+}
+
+
+/* Header */
+
+#logo {
+	height: 50px;
+	width: 125px;
+	position: relative;
+	float: left;
+	left: 150px;
+}
+
+#headerbox {
+	border-bottom: 1px solid lightgrey;
+	padding-bottom: 20px;
+	
+}
+
+header.site-header ul {
+	display: block;
+	margin-top: 0;
+	
+}
+
+header.site-header {
+	/* border-bottom: 2px solid #DDD; */
+	margin-bottom: 20px;
+	padding: 30px 0 0 0;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+
+}
+
+header.site-header h1 {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font-weight: bolder;
+	font-size: 400%;
+	color: #3B171B;
+	display: inline;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header.site-header h1 a:link,
+header.site-header h1 a:visited {
+	text-decoration: none;
+	color: black;
+	margin-left: auto;
+	margin-right: auto;
+	
+
+}
+
+header.site-header h5 {
+	margin-bottom: 1em;
+	display: inline;
+	clear: left;
+}
+
+/*Border Image Bottom*/
+
+#borderimgBot {
+	clear:both;
+	padding-top: 0;
+	margin: 0;
+}
+
+
+
+/* Navigation Menus */
+
+body div nav.site-nav#heading-nav{
+	display: block;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+nav.site-nav ul {
+	margin:0;
+	padding:0;
+	display: block;
+}
+
+nav.site-nav#heading-nav ul:before, .site-nav ul:after{ content: ""; display: table; }
+nav.site-nav#heading-nav ul:after { clear: right; }
+nav.site-nav#heading-nav ul {*zoom: 1; }
+
+
+
+body nav.site-nav ul li {
+	list-style: none;
+	margin-bottom: 8px;
+	margin-top: 2px;
+	margin-left: 3px;
+	margin-right: 3px;
+	display: inline;
+	padding-left: 15px;
+}
+
+
+
+
+
+body nav.site-nav ul li a:link,
+body nav.site-nav ul li a:visited{
+	position: relative;
+	padding: auto;
+	font-size: 1.2em;
+	color: black;
+	/* border-right: 2px solid #DDD; */
+	border-bottom: none;
+	text-decoration: none;
+	font-family: "Trebuchet MS";
+	left: 150px;
+
+}
+
+body nav.site-nav ul li a:hover {
+	color: #02779E;
+}
+
+
+body nav.site-nav#heading-nav ul li.current-menu-item a:link,
+body nav.site-nav#heading-nav ul li.current-menu-item a:visited{
+	color: #02779E;
+	border-bottom: 1px #02779E dotted;
+}
+
+
+/* Footer */
+
+footer.site-footer nav {
+	border-top:1px solid #999;
+}
+
+footer.site-copyright {
+	float: right;
+}
+
+footer nav.site-nav ul {
+	list-style: none;
+	float: left;
+	font-size: 1em;
+	padding: 0;
+	font-family: "Trebuchet MS";
+	margin-top: 10px;
+}
+
+/* Site Footer Menu */
+
+footer nav.site-nav ul li {
+	margin-right: 10px;
+	padding-right: 10px;
+	border-right: 1px dotted #bbb;
+}
+
+/* Page Style */
+
+article.page h2 {
+	font-size: 150%
+}
