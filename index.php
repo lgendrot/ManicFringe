@@ -3,13 +3,6 @@
 get_header();
 
 ?>
-<div id="content">
-
-	<div class="secondary-column">
-			<?php dynamic_sidebar('sidebar1'); ?>
-			<?php dynamic_sidebar('sidebar2'); ?>
-	</div>
-
 
 	<div class="main-column">
 		<?php if (have_posts()) :
@@ -26,9 +19,15 @@ get_header();
 
 		?>
 	</div>
-		
 
-</div>
+<!-- 	<div class="secondary-column">
+			<?php dynamic_sidebar('sidebar1'); ?>
+			<?php dynamic_sidebar('sidebar2'); ?>
+	</div>
+ -->
+
+
+		
 
 
 <?php get_footer();

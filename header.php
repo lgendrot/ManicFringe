@@ -21,35 +21,24 @@
 <body <?php body_class(); ?>>
 
 	<div class="container">
-	
-		<div class="head-search">
-
-		<?php get_search_form()?>
-
-		</div>
-
 		
 		<!-- site-header -->
-		<header class="site-header">
-			<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></h1></a>
-			<br><h5><?php bloginfo('description'); ?></h5>
-			
-		</header>
-		
+		<div class="topbar">
+			<header class="site-header">
+				<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></h1></a>
+			</header>
 
-
+			<nav class="site-nav" id="heading-nav">
+					<?php 
+						$args = array(
+							'theme_location' => 'primary'
+						);
+					?>
+					<?php wp_nav_menu( $args ); ?>
+			</nav>
+		</div>
 		
-		
-		<nav class="site-nav" id="heading-nav">
-			
-			<?php 
-				$args = array(
-					'theme_location' => 'primary'
-				);
-			?>
-			
-			<?php wp_nav_menu( $args ); ?>
+	
 
-		</nav>
 		
 		<!-- /site-header -->

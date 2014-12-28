@@ -4,11 +4,16 @@ Author: lgendrot
 Author URI: http://www.manicfringe.com
 Version: 1.0
 */
+@font-face {
+	font-family: Spireql;  
+	src: url("SPIREQ_L.ttf") format('truetype');  
+}
+
 
 html {
 	padding: 0;
 	margin: 0;
-	background-color: #DDD;
+	background-color: #F2EFF9;
 }
 
 body {
@@ -41,12 +46,11 @@ h1, h2, h3, h4, h5, h6 {
 
 
 article.post {
-	margin-bottom: 50px;
-	clear:left;
+	margin-bottom: 25px;
 	background-color: #FFF;
 	padding-top: 30px;
 	padding-right: 30px;
-	padding-bottom: 30px;
+	padding-bottom: 15px;
 	box-shadow: 1px 1px 5px 0 gray;
 }
 
@@ -69,34 +73,13 @@ div.container{
 
 /* Main Collumn */
 
-#content {
-	padding: 20px;
-	padding-left: 25px;
-	padding-right: 0;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #D3D3D3;
-	width: 80%;
-	border-radius: 8px;
-}
 
 .main-column {
-	width: 64%;
+	display: block;
 	border-radius: 8px;
-	display: inline-block;
-	vertical-align: top;
-	margin: 0 auto;
-	margin-left: 5px;
-	
-}
-/* Secondary Column */
-
-.secondary-column {
-	display: inline-block;
-	width: 33%;
-	margin: 0 auto;
-	left: 10px;
-	margin-right: 5px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* Widgets */
@@ -149,6 +132,10 @@ div.container{
 
 /* article styling */ 
 
+article.post {
+	border-radius: 5px;
+}
+
 article.post:last-of-type{
 	border-bottom: none;
 }
@@ -163,7 +150,6 @@ article.post h2  a:visited, article.post h2 a:link {
 	font-family: sans-serif;
 	text-decoration: none;
 	font-size: 1.4em;
-	font-weight: bold;
 }
 
 article.post p a:visited, article.post p a:link{
@@ -183,46 +169,26 @@ article.post p a:hover{
 
 /* Header */
 
-header.site-header ul {
-	display: block;
-	margin-top: 0;
-
-}
-
 header.site-header {
 	/* border-bottom: 2px solid #DDD; */
-	margin-bottom: 20px;
-	padding: 30px 0 0 0;
-	margin-left: auto;
 	margin-right: auto;
-	text-align: center;
-
+	display: inline-block;
+	margin-left: 20px;
 }
 
 header.site-header h1 {
 	margin-bottom: 0;
 	padding-bottom: 0;
-	font-weight: bolder;
-	font-size: 400%;
+	font-size: 4em;
 	color: #3B171B;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-family: "Spireql", Helvetica, sans-serif;
 }
 
 header.site-header h1 a:link,
 header.site-header h1 a:visited {
 	text-decoration: none;
 	color: black;
-	margin-right: auto;
-	
-
 }
-
-header.site-header h5 {
-	margin-bottom: 1em;
-	display: inline;
-	clear: left;
-}
-
 
 /* Search Bar */
 
@@ -255,14 +221,18 @@ div.head-search {
 
 /* Navigation Menus */
 
-body div nav.site-nav#heading-nav{
-	text-align: center; 
-	margin-bottom: 10px;
-	background-color: #3492B1;
-	box-shadow: 0 1px 3px 0 black;
+.topbar {
+	vertical-align: top;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #fff;
+}
+
+body div nav.site-nav#heading-nav{ 
 	padding: 10px 0 10px 0;
 	display: inline-block;
-	width: 100%;
+	float: right;
+	margin-right: 20px;
 }
 
 nav.site-nav ul {
@@ -282,7 +252,8 @@ body nav.site-nav ul li {
 	margin-top: 2px;
 	margin-left: 7.5px;
 	margin-right: 7.5px;
-	display: inline;
+	display: inline-block;
+	vertical-align: top;
 }
 
 
@@ -292,11 +263,12 @@ body nav.site-nav ul li {
 body nav.site-nav ul li a:link,
 body nav.site-nav ul li a:visited{
 	padding: auto;
-	font-size: 1.5em;
 	color: black;
 	border-bottom: none;
 	text-decoration: none;
-	font-family: "Trebuchet MS";
+	font-family: "Spireql";
+	font-size: 1.75em;
+	font-weight: bold;
 }
 
 body nav.site-nav ul li a:hover {
