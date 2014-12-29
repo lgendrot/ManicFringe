@@ -13,9 +13,9 @@
 			<?php wp_nav_menu( $args ); ?>
 		</nav>
 
-		<footer class= "site-copyright">
+		<div class= "site-copyright">
 			<p><?php bloginfo('name'); ?> -&copy; <?php echo date('Y');?></p>
-		</footer>
+		</div>
 	</footer>
 </div>
 

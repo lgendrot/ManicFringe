@@ -12,6 +12,8 @@
 			?>
 		</title>
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url');?>/style.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<?php wp_head(); ?>
 
 	</head>
@@ -24,21 +26,20 @@
 		
 		<!-- site-header -->
 		<div class="topbar">
-			<header class="site-header">
-				<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></h1></a>
-			</header>
-
-			<nav class="site-nav" id="heading-nav">
-					<?php 
-						$args = array(
-							'theme_location' => 'primary'
-						);
-					?>
-					<?php wp_nav_menu( $args ); ?>
-			</nav>
+					<nav class="site-nav" id="heading-nav">
+							<?php 
+								$args = array(
+									'theme_location' => 'primary'
+								);
+							?>
+							<?php wp_nav_menu( $args ); ?>
+					</nav>
 		</div>
-		
-	
+
+		<header class="site-header">
+			<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+			<h2> <?php bloginfo('description') ?></h2>
+		</header>
 
 		
 		<!-- /site-header -->

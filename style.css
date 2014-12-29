@@ -4,10 +4,31 @@ Author: lgendrot
 Author URI: http://www.manicfringe.com
 Version: 1.0
 */
-@font-face {
-	font-family: Spireql;  
-	src: url("SPIREQ_L.ttf") format('truetype');  
+@media screen and (max-width: 590px) {
+	div.post-thumbnail {
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.post-content {
+		padding: 30px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.main-column {
+		width: 100% !important;
+		clear: both;
+	}
+
+	.secondary-column {
+		display: none !important;
+	}
+
 }
+
+
 
 
 html {
@@ -34,7 +55,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 0 0 1em 0;
+	margin: 0 0 0 0;
 	font-weight: normal;
 }
 
@@ -43,55 +64,50 @@ h1, h2, h3, h4, h5, h6 {
 
 /* General Layout */
 
+div.main-column {
+	width: 75%;
+	display: inline-block;
+}
+
+div.secondary-column {
+	width: 25%;
+	float: right;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 0;
+}
+
+div.even {
+	background-color: #FFF;
+}
+	
 
 
 article.post {
-	margin-bottom: 25px;
-	background-color: #FFF;
-	padding-top: 30px;
-	padding-right: 30px;
-	padding-bottom: 15px;
+	display: block;
+	height: auto;
 	box-shadow: 1px 1px 5px 0 gray;
 }
 
-.post:first-of-type{
-	margin-top: 30px;
-}
 
 article.post p {
-	font-size: 1.18em;
+	font-size: 1.25em;
 	margin-left: auto;
 	margin-right: auto;
+	padding-bottom: 30px;
+	font-family: 'Open Sans', sans-serif;
 }
 
-
-div.container{
-	margin: 0 auto;
-
-}
-
-
-/* Main Collumn */
-
-
-.main-column {
-	display: block;
-	border-radius: 8px;
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-}
 
 /* Widgets */
 
 .widget-item1 {
 	font-family: "Trebuchet MS";
 	background-color: #FFF;
-	margin-top: 30px;
 	box-shadow: 1px 1px 5px 0 gray;
 	padding: 10px 0;
 	text-align: center;
-	height: 250px;
+	height: 100%;
 }
 
 
@@ -116,7 +132,6 @@ div.container{
 .widget-item1 ul li a {
 	margin: 0 auto;
 	display: block;
-	width: 40%;
 	border: 1px solid gray;
 	padding: 10px;
 	border-radius: 10px;
@@ -133,7 +148,18 @@ div.container{
 /* article styling */ 
 
 article.post {
-	border-radius: 5px;
+	margin-bottom: 3px;
+}
+
+
+div.post-content h2 {
+	font-size: 2em;
+	text-align: center;
+	padding-top: 20px;
+}
+ 
+div.post-content .post-info {
+	text-align: center;
 }
 
 article.post:last-of-type{
@@ -143,6 +169,7 @@ article.post:last-of-type{
 article.post h2  {
 	margin-bottom: 0;
 	color: black;
+
 	
 }
 article.post h2  a:visited, article.post h2 a:link {
@@ -150,6 +177,7 @@ article.post h2  a:visited, article.post h2 a:link {
 	font-family: sans-serif;
 	text-decoration: none;
 	font-size: 1.4em;
+	font-family: 'Oswald', sans-serif;
 }
 
 article.post p a:visited, article.post p a:link{
@@ -166,22 +194,48 @@ article.post p a:hover{
 }
 
 
+article p.post-info {
+	font-size: 1em;
+	color: #999;
+}
+
+article p.post-info a:link,
+article p.post-info a:visited {
+	color: #999;
+	border-bottom: 1px #999 dotted;
+
+}
+
+article p.post-info a:hover {
+	color: #013445;
+	border-bottom: 1px #013445 solid;
+	text-decoration: none;
+	padding: 0;
+}
 
 /* Header */
 
 header.site-header {
 	/* border-bottom: 2px solid #DDD; */
 	margin-right: auto;
-	display: inline-block;
-	margin-left: 20px;
+	display: block;
+	clear: both;
+	padding-top: 80px;
+	background-color: white;
 }
 
 header.site-header h1 {
-	margin-bottom: 0;
 	padding-bottom: 0;
-	font-size: 4em;
+	font-size: 6em;
 	color: #3B171B;
-	font-family: "Spireql", Helvetica, sans-serif;
+	font-family: "Oswald", Helvetica, sans-serif;
+	text-align: center;
+}
+header.site-header h2 {
+	color: #3B171B;
+	font-family: "Oswald", Helvetica, sans-serif;
+	text-align: center;
+	padding-bottom: 80px;
 }
 
 header.site-header h1 a:link,
@@ -192,7 +246,7 @@ header.site-header h1 a:visited {
 
 /* Search Bar */
 
-div.head-search {
+/*div.head-search {
 	float: right;
 	position: relative;
 	top: 30px;
@@ -213,7 +267,7 @@ div.head-search {
 	background-color: #3492B1;
 
 }
-
+*/
 
 
 
@@ -223,16 +277,17 @@ div.head-search {
 
 .topbar {
 	vertical-align: top;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #fff;
+	position: fixed;
+	display: block;
+	width: 100%;
+	background-color: white;
+	text-align: right;
 }
 
+
 body div nav.site-nav#heading-nav{ 
-	padding: 10px 0 10px 0;
-	display: inline-block;
-	float: right;
-	margin-right: 20px;
+	padding: 13px 30px 10px 0;
+	clear: left;
 }
 
 nav.site-nav ul {
@@ -254,10 +309,19 @@ body nav.site-nav ul li {
 	margin-right: 7.5px;
 	display: inline-block;
 	vertical-align: top;
+	/*padding-bottom: 13px;*/
 }
 
 
+/*body nav.site-nav ul li.current-menu-item {
+	border-bottom: 2px teal solid;
+}
 
+body nav.site-nav ul li:hover {
+	border-bottom: 2px teal solid;	
+	color: teal;
+}
+*/
 
 
 body nav.site-nav ul li a:link,
@@ -266,63 +330,51 @@ body nav.site-nav ul li a:visited{
 	color: black;
 	border-bottom: none;
 	text-decoration: none;
-	font-family: "Spireql";
-	font-size: 1.75em;
+	font-family: "Oswald" sans-serif;
+	font-size: 1.25em;
 	font-weight: bold;
 }
 
 body nav.site-nav ul li a:hover {
-	color: white;
+	color: teal;
+	padding-bottom: 17px;
+	border-bottom: 2px solid teal;
 }
 
 
 body nav.site-nav#heading-nav ul li.current-menu-item a:link,
 body nav.site-nav#heading-nav ul li.current-menu-item a:visited{
-	color: white;
-	border-bottom: 1px white dotted;
+	color: teal;
+	padding-bottom: 17px;
+	border-bottom: 2px solid teal;
 }
+
 
 
 /* Post Styles */
 
-.post h2 {
-	margin-bottom: 0;
-}
-
-article p.post-info {
-	font-size: 1em;
-	color: #999;
-}
-
-article p.post-info a:link,
-article p.post-info a:visited {
-	color: #999;
-	border-bottom: 1px #999 dotted;
-
-}
-
-article p.post-info a:hover {
-	color: #013445;
-	border-bottom: 1px #013445 solid;
-	text-decoration: none;
-	padding: 0;
-}
 
 /* Image Styles */
 
-.has-thumbnail {
-	position: relative;
-	padding-left: 230px;
+.has-thumbnail .post-content {
+	display: inline-block;
+	vertical-align: top;
 }
 
-.no-thumbnail {
-	padding-left: 30px;
+.post-content .excerpt {
+	padding: 0 100px 50px 100px;
+}
+
+.post-thumbnail img {
+	width: 100%;
+	height: auto;
 }
 
 .post-thumbnail {
-	position: absolute;
-	top: 38px;
-	left: 20px;
+	display: inline-block;
+	clear: none;
+	width: 100%;
+	height: auto;
 }
 
 .banner-img {
@@ -348,7 +400,7 @@ article p.post-info a:hover {
 
 
 
-footer.site-copyright {
+.site-copyright {
 	font-size: .75em;
 	margin-top: 10px;
 	float: right;
@@ -371,11 +423,6 @@ footer nav.site-nav ul li {
 	border-right: 1px dotted #bbb;
 }
 
-/* Page Style */
-
-article.page h2 {
-	font-size: 150%
-}
 
 
 
@@ -388,3 +435,5 @@ article.page h2 {
    height: 0; 
    clear: both;
 }
+
+

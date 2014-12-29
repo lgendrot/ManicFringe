@@ -26,6 +26,7 @@ function ManicFringe_setup() {
 	//Add featured image support
 	add_theme_support('post-thumbnails');
 	
+	add_image_size('medium-thumbnail', 380, 160, true);
 	add_image_size('small-thumbnail', 180, 120, true);
 	add_image_size('banner-image', 935, 275, true);
 	
