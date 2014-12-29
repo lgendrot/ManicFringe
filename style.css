@@ -17,11 +17,6 @@ Version: 1.0
 		margin-right: auto;
 	}
 
-	.main-column {
-		width: 100% !important;
-		clear: both;
-	}
-
 	.secondary-column {
 		display: none !important;
 	}
@@ -65,12 +60,12 @@ h1, h2, h3, h4, h5, h6 {
 /* General Layout */
 
 div.main-column {
-	width: 75%;
+	width: 66%;
 	display: inline-block;
 }
 
 div.secondary-column {
-	width: 25%;
+	width: 34%;
 	float: right;
 	display: inline-block;
 	vertical-align: top;
@@ -176,7 +171,7 @@ article.post h2  a:visited, article.post h2 a:link {
 	color: #1A2B2B;
 	font-family: sans-serif;
 	text-decoration: none;
-	font-size: 1.4em;
+	font-size: 1.75em;
 	font-family: 'Oswald', sans-serif;
 }
 
@@ -368,6 +363,7 @@ body nav.site-nav#heading-nav ul li.current-menu-item a:visited{
 .post-thumbnail img {
 	width: 100%;
 	height: auto;
+	border-radius: 3px;
 }
 
 .post-thumbnail {
