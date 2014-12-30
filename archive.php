@@ -5,7 +5,28 @@ get_header();
 ?>
 
 <div class="mid-bar">
-	<h2>Recent Posts</h2>
+	<h2>
+		<?php  
+			if (is_category()): {
+				single_cat_title();
+			}
+			elseif ( is_author() ): {
+				the_post();
+				echo "By: " . get_the_author_meta('first_name');
+				rewind_posts();
+			}
+			elseif (is_day()): {
+				echo "Archive | " . get_the_date();
+			}
+			elseif (is_month()): {
+				echo "Archive | " . get_the_date('F Y');
+			}
+			elseif (is_year()): {
+				echo "Archive | " . get_the_date( 'Y');
+			}
+			endif
+		?>
+	</h2>
 </div>
 
 <div class="content-container">

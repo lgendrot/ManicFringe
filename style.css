@@ -29,7 +29,7 @@ Version: 1.0
 html {
 	padding: 0;
 	margin: 0;
-	background-color: #F2EFF9;
+	background-color: #d7d7d7;
 }
 
 body {
@@ -59,13 +59,21 @@ h1, h2, h3, h4, h5, h6 {
 
 /* General Layout */
 
+div.site-content {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+}
+
+
 div.main-column {
 	width: 66%;
 	display: inline-block;
 }
 
 div.secondary-column {
-	width: 34%;
+	width: 33%;
 	float: right;
 	display: inline-block;
 	vertical-align: top;
@@ -73,7 +81,11 @@ div.secondary-column {
 }
 
 div.even {
-	background-color: #FFF;
+	background-color: #f3f2f8;
+}
+
+div.odd {
+	background-color: #faf9ff;
 }
 	
 
@@ -81,8 +93,9 @@ div.even {
 article.post {
 	display: block;
 	height: auto;
-	box-shadow: 1px 1px 5px 0 gray;
+	margin-bottom: 0;
 }
+
 
 
 article.post p {
@@ -91,6 +104,7 @@ article.post p {
 	margin-right: auto;
 	padding-bottom: 30px;
 	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 0;
 }
 
 
@@ -102,34 +116,15 @@ article.post p {
 	box-shadow: 1px 1px 5px 0 gray;
 	padding: 10px 0;
 	text-align: center;
-	height: 100%;
 }
 
 
 
 .widget-item1 ul {
-	list-style: none;
 	text-align: center;
 	margin: 0;
 	padding: 0;
 
-}
-
-.widget-item1 ul li {
-
-	margin-top: 10px;
-	margin-left: auto;
-	margin-right: auto;
-
-}
-
-
-.widget-item1 ul li a {
-	margin: 0 auto;
-	display: block;
-	border: 1px solid gray;
-	padding: 10px;
-	border-radius: 10px;
 }
 
 .widget-item1 h2.widgettitle {
@@ -142,10 +137,6 @@ article.post p {
 
 /* article styling */ 
 
-article.post {
-	margin-bottom: 3px;
-}
-
 
 div.post-content h2 {
 	font-size: 2em;
@@ -157,7 +148,7 @@ div.post-content .post-info {
 	text-align: center;
 }
 
-article.post:last-of-type{
+article.post:last-of-type {
 	border-bottom: none;
 }
 
@@ -210,33 +201,33 @@ article p.post-info a:hover {
 
 /* Header */
 
+
 header.site-header {
 	/* border-bottom: 2px solid #DDD; */
-	margin-right: auto;
 	display: block;
-	clear: both;
-	padding-top: 80px;
-	background-color: white;
+	padding-top: 10px;
+	background-color: #161c20;
+	box-shadow: 0 .5px 5px 0 #d7d7d7;
 }
 
 header.site-header h1 {
 	padding-bottom: 0;
-	font-size: 6em;
-	color: #3B171B;
+	font-size: 5em;
 	font-family: "Oswald", Helvetica, sans-serif;
 	text-align: center;
 }
 header.site-header h2 {
-	color: #3B171B;
-	font-family: "Oswald", Helvetica, sans-serif;
+	color: white;
+	font-size: 1.2em;
+	font-family: "Open Sans", Helvetica, sans-serif;
 	text-align: center;
-	padding-bottom: 80px;
+	padding-bottom: 15px;
 }
 
 header.site-header h1 a:link,
 header.site-header h1 a:visited {
 	text-decoration: none;
-	color: black;
+	color: white;
 }
 
 /* Search Bar */
@@ -271,19 +262,14 @@ header.site-header h1 a:visited {
 /* Navigation Menus */
 
 .topbar {
-	vertical-align: top;
-	position: fixed;
-	display: block;
-	width: 100%;
-	background-color: white;
-	text-align: right;
+	background-color: #161c20;
+	text-align: center;
 }
 
-
-body div nav.site-nav#heading-nav{ 
-	padding: 13px 30px 10px 0;
-	clear: left;
+.site-nav {
+	z-index: 100;
 }
+
 
 nav.site-nav ul {
 	margin:0;
@@ -299,7 +285,7 @@ nav.site-nav#heading-nav ul {*zoom: 1; }
 body nav.site-nav ul li {
 	list-style: none;
 	margin-bottom: 8px;
-	margin-top: 2px;
+	margin-top: 8px;
 	margin-left: 7.5px;
 	margin-right: 7.5px;
 	display: inline-block;
@@ -321,27 +307,25 @@ body nav.site-nav ul li:hover {
 
 body nav.site-nav ul li a:link,
 body nav.site-nav ul li a:visited{
-	padding: auto;
-	color: black;
+	color: white;
 	border-bottom: none;
 	text-decoration: none;
 	font-family: "Oswald" sans-serif;
 	font-size: 1.25em;
-	font-weight: bold;
 }
 
 body nav.site-nav ul li a:hover {
-	color: teal;
-	padding-bottom: 17px;
-	border-bottom: 2px solid teal;
+	color: white;
+	padding-bottom: 6px;
+	border-bottom: 2px solid white;
 }
 
 
 body nav.site-nav#heading-nav ul li.current-menu-item a:link,
 body nav.site-nav#heading-nav ul li.current-menu-item a:visited{
-	color: teal;
-	padding-bottom: 17px;
-	border-bottom: 2px solid teal;
+	color: white;
+	padding-bottom: 6px;
+	border-bottom: 2px solid white;
 }
 
 
@@ -357,7 +341,7 @@ body nav.site-nav#heading-nav ul li.current-menu-item a:visited{
 }
 
 .post-content .excerpt {
-	padding: 0 100px 50px 100px;
+	padding: 0 60px 50px 60px;
 }
 
 .post-thumbnail img {
@@ -430,6 +414,71 @@ footer nav.site-nav ul li {
    display: block; 
    height: 0; 
    clear: both;
+}
+
+
+div.crafty-social-buttons .crafty-social-caption {
+	font-family: "Oswald";
+	font-size: 2em;
+	margin-top: 30px;
+}
+
+
+
+div.mid-bar {
+	text-align: center;
+	font-family: "Oswald";
+	font-size: 2em;
+	background-color: gray;
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-transform: capitalize;
+	box-shadow: inset 0px 0px 20px 3px rgba(50, 50, 50, 0.67);
+}
+
+
+
+
+article.post.page {
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+
+.single-post-column {
+	width: 59.4%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+}
+
+.single-post-column img {
+	width: 100%;
+	height: auto;
+}
+
+.single-post-column .post-info, .single-post-column h2 {
+	text-align: center;
+}
+
+.single-post-column h2 {
+	padding-top: 30px;
+	font-size: 2em;
+}
+
+.single-post-content {
+	padding: 30px 60px 30px 60px;
+} 
+
+.single-post-comments {
+	padding: 30px 60px 30px 60px;
+}
+
+.comment-separator {
+	font-size: 3em;
 }
 
 

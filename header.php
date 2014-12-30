@@ -23,23 +23,25 @@
 <body <?php body_class(); ?>>
 
 	<div class="container">
+
+<div id="header-container">
+	<header class="site-header">
+		<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+		<h2> <?php bloginfo('description') ?></h2>
+	</header>
+
+			<!-- site-header -->
+	<div class="topbar">
+		<nav class="site-nav" id="heading-nav">
+				<?php 
+					$args = array(
+						'theme_location' => 'primary',
+					);
+				?>
+				<?php wp_nav_menu( $args ); ?>
+		</nav>
+	</div>
+</div>
 		
-		<!-- site-header -->
-		<div class="topbar">
-					<nav class="site-nav" id="heading-nav">
-							<?php 
-								$args = array(
-									'theme_location' => 'primary'
-								);
-							?>
-							<?php wp_nav_menu( $args ); ?>
-					</nav>
-		</div>
-
-		<header class="site-header">
-			<h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-			<h2> <?php bloginfo('description') ?></h2>
-		</header>
-
 		
 		<!-- /site-header -->

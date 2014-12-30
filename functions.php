@@ -36,7 +36,7 @@ function ManicFringe_setup() {
 	register_nav_menus(array(
 
 		'primary' => __( 'Primary Menu'),
-		'footer' => __('Footer Menu')
+		'footer' => __('Footer Menu'),
 
 ));
 
@@ -53,14 +53,6 @@ function manicWidgetsInit() {
 		'name' => 'Sidebar',
 		'id' => 'sidebar1',
 		'before_widget' => '<div class="widget-item1">',
-		'after_widget' => '</div>'
-		
-	));
-	
-	register_sidebar(array(
-		'name' => 'Sidebar',
-		'id' => 'sidebar2',
-		'before_widget' => '<div class="widget-item2">',
 		'after_widget' => '</div>'
 		
 	));
