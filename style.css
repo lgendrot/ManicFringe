@@ -4,24 +4,6 @@ Author: lgendrot
 Author URI: http://www.manicfringe.com
 Version: 1.0
 */
-@media screen and (max-width: 590px) {
-	div.post-thumbnail {
-		max-width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.post-content {
-		padding: 30px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.secondary-column {
-		display: none !important;
-	}
-
-}
 
 
 
@@ -29,7 +11,7 @@ Version: 1.0
 html {
 	padding: 0;
 	margin: 0;
-	background-color: #d7d7d7;
+	background-color: #f7f7f7;
 }
 
 body {
@@ -60,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 /* General Layout */
 
 div.site-content {
-	width: 90%;
+	width: 85%;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: white;
@@ -68,12 +50,12 @@ div.site-content {
 
 
 div.main-column {
-	width: 66%;
+	width: 70%;
 	display: inline-block;
 }
 
 div.secondary-column {
-	width: 33%;
+	width: 30%;
 	float: right;
 	display: inline-block;
 	vertical-align: top;
@@ -81,11 +63,11 @@ div.secondary-column {
 }
 
 div.even {
-	background-color: #f3f2f8;
+	background-color: white;
 }
 
 div.odd {
-	background-color: #faf9ff;
+	background-color: white;
 }
 	
 
@@ -99,12 +81,16 @@ article.post {
 
 
 article.post p {
-	font-size: 1.25em;
+	font-size: 1.35em;
 	margin-left: auto;
 	margin-right: auto;
 	padding-bottom: 30px;
 	font-family: 'Open Sans', sans-serif;
 	margin-bottom: 0;
+}
+
+article.post p img {
+	margin-top: 20px
 }
 
 
@@ -162,7 +148,7 @@ article.post h2  a:visited, article.post h2 a:link {
 	color: #1A2B2B;
 	font-family: sans-serif;
 	text-decoration: none;
-	font-size: 1.75em;
+	font-size: 1.9em;
 	font-family: 'Oswald', sans-serif;
 }
 
@@ -268,6 +254,8 @@ header.site-header h1 a:visited {
 
 .site-nav {
 	z-index: 100;
+	display: block;
+	width: 100%;
 }
 
 
@@ -365,16 +353,12 @@ body nav.site-nav#heading-nav ul li.current-menu-item a:visited{
 /* Footer */
 
 #footer-container {
-	clear: both;
-	background-color: #FFF;
+	background-color: #161c20;
 	margin-top: 5px;
+	vertical-align: bottom;
+	height: 90px;
 }
 
-.site-footer {
-	max-width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-}
 
 	
 
@@ -382,8 +366,8 @@ body nav.site-nav#heading-nav ul li.current-menu-item a:visited{
 
 .site-copyright {
 	font-size: .75em;
-	margin-top: 10px;
-	float: right;
+	color: white;
+	text-align: center;
 }
 
 footer nav.site-nav ul {
@@ -391,8 +375,9 @@ footer nav.site-nav ul {
 	float: left;
 	font-size: .75em;
 	padding: 0;
-	font-family: "Trebuchet MS";
+	font-family: "Open Sans";
 	margin-top: 10px;
+	color: black;
 }
 
 /* Site Footer Menu */
@@ -423,8 +408,6 @@ div.crafty-social-buttons .crafty-social-caption {
 	margin-top: 30px;
 }
 
-
-
 div.mid-bar {
 	text-align: center;
 	font-family: "Oswald";
@@ -439,6 +422,16 @@ div.mid-bar {
 
 
 
+div.mid-bar a {
+	text-decoration: none;
+	color: white;
+}
+
+div.mid-bar a:hover {
+	color: #d7d7d7;
+}
+
+
 
 article.post.page {
 	width: 40%;
@@ -449,7 +442,7 @@ article.post.page {
 
 
 .single-post-column {
-	width: 59.4%;
+	width: 59.5%;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: white;
@@ -479,6 +472,79 @@ article.post.page {
 
 .comment-separator {
 	font-size: 3em;
+}
+
+
+
+@media screen and (max-width: 950px) {
+	div.main-column {
+		width: 100%;
+	}
+
+	.secondary-column {
+		display: none !important;
+		display: block;
+		clear: both;
+	}
+}
+
+
+
+@media screen and (max-width: 812px) {
+
+	article.post p.excerpt {
+		padding: 7px;
+	}
+
+	div.site-content {
+		width: 100%;
+	}
+
+	div.main-column {
+		width: 100%;
+	}
+
+	div.post-thumbnail {
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.post-content {
+		padding: 30px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.secondary-column {
+		display: none !important;
+		display: block;
+		clear: both;
+	}
+
+	div.mid-bar {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+}
+
+
+}
+
+@media screen and (max-width: 869px) {
+	.crafty-social-button-image {
+		height: auto;
+	}
+
+	.crafty-social-button {
+		width: 44px;
+	}
+
+	ul.crafty-social-buttons-list li {
+		width: 44px;
+	}
+
 }
 
 

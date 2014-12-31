@@ -24,6 +24,11 @@ get_header();
 			elseif (is_year()): {
 				echo "Archive | " . get_the_date( 'Y');
 			}
+			elseif (is_post()): {
+				$url = wp_get_referer();
+				$path_parts = pathinfo($url);
+				echo 'Back to '. $path_parts['filename'], "\n";
+			}
 			endif
 		?>
 	</h2>
