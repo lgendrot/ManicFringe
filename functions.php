@@ -10,6 +10,18 @@ add_action('wp_enqueue_scripts', 'firstSite_resources');
 
 
 
+function mySearchFilter($query) {
+if ($query->is_search) {
+$query->set('post_type', 'post');
+}
+return $query;
+}
+
+add_filter('pre_get_posts','mySearchFilter');
+
+
+
+
 
 //Customize excerpt word count length
 

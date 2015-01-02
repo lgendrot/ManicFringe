@@ -1,7 +1,7 @@
 
 
 <div id="footer-container">
-	<footer class="site-footer clearfix">
+	<footer class="site-footer">
 		<nav class="site-nav">
 
 				<?php 

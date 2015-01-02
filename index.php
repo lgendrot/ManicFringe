@@ -8,7 +8,6 @@ get_header();
 	<h2>Recent Posts</h2>
 </div>
 
-<div class="content-container">
 	<div class="site-content">
 		<div class="secondary-column">
 			<?php dynamic_sidebar('sidebar1'); ?>
@@ -31,7 +30,6 @@ get_header();
 				?>
 			</div>
 	</div>
-</div>
 
 
 		

@@ -12,6 +12,7 @@ html {
 	padding: 0;
 	margin: 0;
 	background-color: #f7f7f7;
+	height: 100%;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
 	margin: 0;
 	font-family: Arial, sans-serif;
 	font-size: 14px;
+	height: 100%;
 }
 
 a:link,
@@ -36,6 +38,9 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 }
 
+.container {
+	min-height: 100%;
+}
 
 
 
@@ -50,12 +55,12 @@ div.site-content {
 
 
 div.main-column {
-	width: 70%;
+	width: 75%;
 	display: inline-block;
 }
 
 div.secondary-column {
-	width: 30%;
+	width: 25%;
 	float: right;
 	display: inline-block;
 	vertical-align: top;
@@ -99,7 +104,7 @@ article.post p img {
 .widget-item1 {
 	font-family: "Trebuchet MS";
 	background-color: #FFF;
-	box-shadow: 1px 1px 5px 0 gray;
+	/*box-shadow: 1px 1px 5px 0 gray;*/
 	padding: 10px 0;
 	text-align: center;
 }
@@ -118,6 +123,17 @@ article.post p img {
 	font-size: 1.6em;
 	font-weight: bold;
 	margin-top: 15px;
+}
+
+input#searchsubmit {
+	display: none;
+}
+
+input#s {
+	width: 90%;
+	height: 24px;
+	border-radius: 3px;
+	border: 2px solid #d7d7d7;
 }
 
 
@@ -354,9 +370,15 @@ body nav.site-nav#heading-nav ul li.current-menu-item a:visited{
 
 #footer-container {
 	background-color: #161c20;
-	margin-top: 5px;
 	vertical-align: bottom;
-	height: 90px;
+	height: 70px;
+	position: relative;
+	top: 20px;
+
+}
+
+footer.site-footer {
+	height: 60px;
 }
 
 
@@ -367,10 +389,11 @@ body nav.site-nav#heading-nav ul li.current-menu-item a:visited{
 .site-copyright {
 	font-size: .75em;
 	color: white;
-	text-align: center;
+	margin: 0;
+	padding: 0;
 }
 
-footer nav.site-nav ul {
+/*footer nav.site-nav ul {
 	list-style: none;
 	float: left;
 	font-size: .75em;
@@ -387,7 +410,7 @@ footer nav.site-nav ul li {
 	padding-right: 10px;
 	border-right: 1px dotted #bbb;
 }
-
+*/
 
 
 
@@ -404,7 +427,7 @@ footer nav.site-nav ul li {
 
 div.crafty-social-buttons .crafty-social-caption {
 	font-family: "Oswald";
-	font-size: 2em;
+	font-size: 1.5em;
 	margin-top: 30px;
 }
 
@@ -414,10 +437,11 @@ div.mid-bar {
 	font-size: 2em;
 	background-color: gray;
 	color: white;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	text-transform: capitalize;
 	box-shadow: inset 0px 0px 20px 3px rgba(50, 50, 50, 0.67);
+	min-height: 62px;
 }
 
 
@@ -442,7 +466,7 @@ article.post.page {
 
 
 .single-post-column {
-	width: 59.5%;
+	width: 63.75%;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: white;
@@ -463,7 +487,7 @@ article.post.page {
 }
 
 .single-post-content {
-	padding: 30px 60px 30px 60px;
+	padding: 30px 75px 30px 75px;
 } 
 
 .single-post-comments {
@@ -475,8 +499,15 @@ article.post.page {
 }
 
 
+@media screen and (max-width: 1100px) {
+	.single-post-column {
+		width: 75%;
+	}
 
-@media screen and (max-width: 950px) {
+}
+
+
+@media screen and (max-width: 1000px) {
 	div.main-column {
 		width: 100%;
 	}
@@ -486,8 +517,28 @@ article.post.page {
 		display: block;
 		clear: both;
 	}
+	
 }
 
+@media screen and (max-width: 869px) {
+	.crafty-social-button-image {
+		height: auto;
+	}
+
+	.crafty-social-button {
+		width: 44px;
+	}
+
+	ul.crafty-social-buttons-list li {
+		width: 44px;
+	}
+
+	div.single-post-column {
+		width: 99%;
+	}
+
+
+}
 
 
 @media screen and (max-width: 812px) {
@@ -523,28 +574,84 @@ article.post.page {
 	}
 
 	div.mid-bar {
-		padding-top: 5px;
-		padding-bottom: 5px;
+		padding-top: 15px;
+		padding-bottom: 10px;
+	}
+
+	div.single-post-content {
+		font-size: 1em;
+	}
+
+}
+
+@media screen and (max-width: 630px) {
+	div.single-post-content {
+		font-size: .9em;
+		padding: 20px;
+	}
+
+	div.post-content p {
+		font-size: 1.1em;
+	}
+	div.post-content h2 {
+		font-size: 1.5em;
+	}
+
+	div.single-post-content p {
+		font-size: 1.3em;
+	}
+
+	div.single-post-column h2 {
+		font-size: 1.5em;
+	}
+
+	.site-header a {
+		font-size: .75em;
+	}
+
+
+	article p.post-info {
+		font-size: .8em;
+	}
+
+	.single-post-comments {
+		padding: 25px;
+	}
+
+}
+
+@media screen and (max-width: 500px) {
+	div.single-post-content {
+		font-size: .9em;
+		padding: 30px;
+	}
+
+	div.post-content p {
+		font-size: .95em;
+	}
+	div.post-content h2 {
+		font-size: 1.2em;
+	}
+
+	div.single-post-content p {
+		font-size: 1.2em;
+	}
+	
+	div.single-post-column h2 {
+		font-size: 1.2em;
+	}
+
+	header.site-header h2 {
+		font-size: .9em;
+	}
+
+	.mid-bar a {
+		font-size: .85em;
 	}
 
 }
 
 
-}
 
-@media screen and (max-width: 869px) {
-	.crafty-social-button-image {
-		height: auto;
-	}
-
-	.crafty-social-button {
-		width: 44px;
-	}
-
-	ul.crafty-social-buttons-list li {
-		width: 44px;
-	}
-
-}
 
 

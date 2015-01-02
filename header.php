@@ -8,7 +8,7 @@
 		<title>
 			<?php 
 				wp_title('|', true, 'right');
-				bloginfo('name'); 
+				bloginfo('name');
 			?>
 		</title>
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url');?>/style.css"/>

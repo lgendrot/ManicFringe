@@ -5,9 +5,7 @@ get_header();
 ?>
 
 <div class="mid-bar">
-	<h2>
-		<a href="javascript:history.go(-1)" onMouseOver="self.status=document.referrer;return true">&larr; Back</a>
-	</h2>
+
 </div>
 
 
